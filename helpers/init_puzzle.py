@@ -25,7 +25,13 @@ def init_problem(problem: int | None = None) -> None:  # noqa: D103
             if query not in prob_ids:
                 puzzle_base = f"pe_{query:05}"
                 break
+
+        if query > 100:
+            raise ValueError("Cannot publicly solve problems beyond the first 100")
     else:
+        if problem > 100:
+            raise ValueError("Cannot publicly solve problems beyond the first 100")
+
         puzzle_base = f"pe_{problem:05}"
 
     try:

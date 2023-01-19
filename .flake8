@@ -20,4 +20,5 @@ extend-ignore=
 extend-exclude=
     .venv,
 per-file-ignores =
+    project_euler/pe_*.py:D415,
     tests/test_*.py:D103 E501,

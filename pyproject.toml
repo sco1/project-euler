@@ -15,6 +15,10 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Typing :: Typed",
 ]
+packages = [{include="helpers"}]
+
+[tool.poetry.scripts]
+pe-next = "helpers.init_puzzle:main"
 
 [tool.poetry.dependencies]
 python = "^3.11"

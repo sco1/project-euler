@@ -1,6 +1,6 @@
 import pytest
 
-from helpers.matlib import estimate_prime
+from helpers.matlib import estimate_prime, triangle_numbers
 
 PRIME_ESTIMATE_CASES = (
     (1, 2),
@@ -20,3 +20,8 @@ PRIME_ESTIMATE_CASES = (
 @pytest.mark.parametrize(("n", "nth_prime"), PRIME_ESTIMATE_CASES)
 def test_prime_estimation(n: int, nth_prime: int) -> None:
     assert nth_prime <= estimate_prime(n)
+
+
+def test_triangle_numbers() -> None:
+    nums = triangle_numbers()
+    assert [next(nums) for _ in range(7)] == [1, 3, 6, 10, 15, 21, 28]

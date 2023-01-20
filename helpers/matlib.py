@@ -1,3 +1,4 @@
+import itertools
 import math
 import typing as t
 
@@ -51,3 +52,10 @@ def gcd(a: int, b: int) -> int:  # noqa: D103
 
 def is_coprime(a: int, b: int) -> bool:  # noqa: D103
     return math.gcd(a, b) == 1
+
+
+def triangle_numbers() -> t.Generator[int, None, None]:  # noqa: D103
+    num = 0
+    for i in itertools.count(1):  # pragma: no branch
+        num += i
+        yield num

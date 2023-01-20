@@ -1,4 +1,5 @@
 """
+Largest palindrome product
 https://projecteuler.net/problem=4
 
 A palindromic number reads the same both ways. The largest palindrome made from the product of two
@@ -10,7 +11,7 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 import itertools
 
 
-def largest_palindrome_product(n_digits: int = 3) -> int:  # noqa: D103
+def largest_palindrome_product(n_digits: int = 3) -> int:
     largest_prod = -1
     for a, b in itertools.combinations(range(10 ** (n_digits - 1), 10**n_digits), 2):
         str_prod = str(a * b)

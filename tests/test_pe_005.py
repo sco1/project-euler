@@ -1,6 +1,6 @@
 import pytest
 
-from project_euler.pe_00005 import lowest_common_multiple
+from project_euler.pe_005 import lowest_common_multiple
 
 LCM_CASES = (
     (3, 6),

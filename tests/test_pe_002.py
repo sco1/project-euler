@@ -1,4 +1,4 @@
-from project_euler.pe_00002 import sum_even_fib
+from project_euler.pe_002 import sum_even_fib
 
 
 def test_even_fib() -> None:

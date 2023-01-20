@@ -1,6 +1,6 @@
 import pytest
 
-from project_euler.pe_00003 import largest_prime_factor
+from project_euler.pe_003 import largest_prime_factor
 
 LPF_CASES = (
     (1, 1),

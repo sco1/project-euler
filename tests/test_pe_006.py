@@ -1,4 +1,4 @@
-from project_euler.pe_00006 import sum_square_diff
+from project_euler.pe_006 import sum_square_diff
 
 
 def test_sum_square_diff() -> None:

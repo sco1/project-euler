@@ -39,3 +39,15 @@ def sieve_of_eratosthenes(limit: int) -> t.Generator[int, None, None]:
             # increment from there
             for k in range(idx**2, limit, idx):
                 mark[k] = False
+
+
+def gcd(a: int, b: int) -> int:  # noqa: D103
+    # See: https://en.wikipedia.org/wiki/Euclidean_algorithm
+    while b != 0:
+        a, b = b, a % b
+
+    return a
+
+
+def is_coprime(a: int, b: int) -> bool:  # noqa: D103
+    return math.gcd(a, b) == 1

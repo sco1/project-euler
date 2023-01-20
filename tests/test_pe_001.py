@@ -1,4 +1,4 @@
-from project_euler.pe_00001 import multiples_sum, multiples_sum_brute
+from project_euler.pe_001 import multiples_sum, multiples_sum_brute
 
 
 def test_multiples_sum() -> None:

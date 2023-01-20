@@ -1,6 +1,6 @@
 import pytest
 
-from project_euler.pe_00007 import nth_prime
+from project_euler.pe_007 import nth_prime
 
 PRIME_CASES = (
     (1, 2),

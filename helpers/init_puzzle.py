@@ -21,9 +21,9 @@ def init_problem(problem: int | None = None) -> None:  # noqa: D103
         solve_files = SOLVE_DIR.glob("pe_*.py")
         prob_ids = {int(file.stem.split("_")[-1]) for file in solve_files}
 
-        for query in range(1, 10_000):
+        for query in range(1, 102):
             if query not in prob_ids:
-                puzzle_base = f"pe_{query:05}"
+                puzzle_base = f"pe_{query:03}"
                 break
 
         if query > 100:
@@ -32,7 +32,7 @@ def init_problem(problem: int | None = None) -> None:  # noqa: D103
         if problem > 100:
             raise ValueError("Cannot publicly solve problems beyond the first 100")
 
-        puzzle_base = f"pe_{problem:05}"
+        puzzle_base = f"pe_{problem:03}"
 
     try:
         solve_path = SOLVE_DIR / f"{puzzle_base}.py"

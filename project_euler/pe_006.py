@@ -28,5 +28,9 @@ def sum_square_diff(n: int = 100) -> int:
     return int((3 * n**4 + 2 * n**3 - 3 * n**2 - 2 * n) / 12)
 
 
+def test_sum_square_diff() -> None:
+    assert sum_square_diff(10) == 2640
+
+
 if __name__ == "__main__":
     print(f"Solution: {sum_square_diff()}")

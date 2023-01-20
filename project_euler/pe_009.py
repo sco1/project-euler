@@ -11,6 +11,8 @@ Find the product abc.
 """
 import itertools
 
+import pytest
+
 
 def special_pythagorean_triplet(target: int = 1000) -> int:
     # Diving into the equation a bit, we know that c = target - (a + b)
@@ -29,6 +31,16 @@ def special_pythagorean_triplet(target: int = 1000) -> int:
             return a * b * c
 
     raise ValueError("Could not determine a triplet matching the provided target.")
+
+
+def test_pythagorean_triplet() -> None:
+    assert special_pythagorean_triplet(12) == 60
+
+
+@pytest.mark.parametrize("target", (-10, 10))
+def test_unreachable_target_raises(target: int) -> None:
+    with pytest.raises(ValueError):
+        special_pythagorean_triplet(target)
 
 
 if __name__ == "__main__":

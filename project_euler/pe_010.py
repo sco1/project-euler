@@ -13,5 +13,9 @@ def prime_summation(limit: int = 2_000_000) -> int:
     return sum(sieve_of_eratosthenes(limit))
 
 
+def test_prime_summation() -> None:
+    assert prime_summation(10) == 17
+
+
 if __name__ == "__main__":
     print(f"Solution: {prime_summation()}")

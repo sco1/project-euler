@@ -28,5 +28,9 @@ def sum_even_fib(cap: int = 4_000_000) -> int:
     return even_sum
 
 
+def test_even_fib() -> None:
+    assert sum_even_fib(cap=100) == 44
+
+
 if __name__ == "__main__":
     print(f"Solution: {sum_even_fib()}")

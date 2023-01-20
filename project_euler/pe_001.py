@@ -40,5 +40,13 @@ def multiples_sum(a: int = 3, b: int = 5, cap: int = 1000) -> int:
     return a_sum + b_sum - ab_sum
 
 
+def test_multiples_sum() -> None:
+    assert multiples_sum(cap=10) == 23
+
+
+def test_multiples_sum_brute() -> None:
+    assert multiples_sum_brute(cap=10) == 23
+
+
 if __name__ == "__main__":
     print(f"Solution: {multiples_sum()}")

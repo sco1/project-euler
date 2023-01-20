@@ -21,5 +21,9 @@ def largest_palindrome_product(n_digits: int = 3) -> int:
     return largest_prod
 
 
+def test_largest_palindrome_product() -> None:
+    assert largest_palindrome_product(2) == 9009
+
+
 if __name__ == "__main__":
     print(f"Solution: {largest_palindrome_product()}")

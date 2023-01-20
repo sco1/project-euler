@@ -48,5 +48,9 @@ def largest_adjacent_prod(series: str = DIGIT_SERIES, n: int = 13) -> int:
     return max(sliding_prod(series, n))
 
 
+def test_largest_adjacent_prod() -> None:
+    assert largest_adjacent_prod(n=4) == 5832
+
+
 if __name__ == "__main__":
     print(f"Solution: {largest_adjacent_prod()}")

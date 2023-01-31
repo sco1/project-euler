@@ -36,7 +36,7 @@ def collatz_length(val: int) -> int:
     return collatz_length(val) + 1
 
 
-def longest_collatz(limit: int = 1_000_000) -> int:
+def longest_collatz(limit: int = 1_000_000) -> int:  # pragma: no cover
     return max(range(1, limit), key=collatz_length)
 
 

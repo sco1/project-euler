@@ -15,8 +15,8 @@ def largest_prime_factor(num: int = 600_851_475_143) -> int:
 
     # The ordinary factorization tree seems speedy enough
     largest_factor = -1
-    while num > 1:  # pragme: no branch
-        for i in range(2, num + 1):
+    while num > 1:
+        for i in range(2, num + 1):  # pragma: no branch
             if num % i == 0:
                 largest_factor = max(largest_factor, i)
                 num //= i

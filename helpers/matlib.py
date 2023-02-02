@@ -1,6 +1,7 @@
 import itertools
 import math
 import typing as t
+from functools import lru_cache
 
 
 def estimate_prime(n: int) -> int:
@@ -59,3 +60,28 @@ def triangle_numbers() -> t.Generator[int, None, None]:  # noqa: D103
     for i in itertools.count(1):  # pragma: no branch
         num += i
         yield num
+
+
+@lru_cache()
+def proper_divisors(n: int) -> set[int]:  # noqa: D103
+    divisors = {1}
+    for i in range(2, math.isqrt(n) + 1):
+        if n % i == 0:
+            divisors.add(i)
+            divisors.add(n // i)
+
+    return divisors
+
+
+def fibonacci() -> t.Generator[int, None, None]:  # noqa: D103
+    n_2 = n_1 = 1
+    yield n_2
+    yield n_1
+
+    while True:
+        n_2, n_1 = n_1, (n_2 + n_1)
+        yield n_1
+
+
+def n_digits(n: int) -> int:  # noqa: D103
+    return math.floor(math.log10(n)) + 1

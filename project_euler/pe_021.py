@@ -13,21 +13,16 @@ d(220) = 284. The proper divisors of 284 are 1, 2, 4, 71 and 142; so d(284) = 22
 
 Evaluate the sum of all the amicable numbers under 10000.
 """
-import math
 from functools import lru_cache
 
 import pytest
 
+from helpers.matlib import proper_divisors
+
 
 @lru_cache()
 def sum_divisors(n: int) -> int:
-    divisors = {1}
-    for i in range(2, math.isqrt(n) + 1):
-        if n % i == 0:
-            divisors.add(i)
-            divisors.add(n // i)
-
-    return sum(divisors)
+    return sum(proper_divisors(n))
 
 
 def sum_amicable_numbers(limit: int = 10_000) -> int:  # pragma: no cover

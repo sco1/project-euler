@@ -13,6 +13,7 @@ classifiers = [
     "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Typing :: Typed",
 ]
 packages = [{include="helpers"}]
@@ -22,17 +23,18 @@ pe-next = "helpers.init_puzzle:main"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-more-itertools = "^9.0"
+more-itertools = "^10.1"
 
 [tool.poetry.dev-dependencies]
-black = "^22.12"
+black = "^23.1"
+bump2version = "^1.0"
 flake8 = "^6.0"
 flake8-annotations = "^3.0"
 flake8-bugbear = "^23.1"
-flake8-docstrings = "^1.6"
+flake8-docstrings = "^1.7"
 flake8-fixme = "^1.1"
-isort = "^5.11"
-mypy = "^0.991"
+isort = "^5.12"
+mypy = "^1.0"
 pep8-naming = "^0.13"
 pre-commit = "^3.0"
 pytest = "^7.2"

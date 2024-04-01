@@ -18,6 +18,7 @@ that cannot be expressed as the sum of two abundant numbers is less than this li
 Find the sum of all the positive integers which cannot be written as the sum of two abundant
 numbers.
 """
+
 import itertools
 
 from helpers.matlib import proper_divisors

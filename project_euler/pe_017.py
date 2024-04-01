@@ -12,6 +12,7 @@ NOTE: Do not count spaces or hyphens. For example, 342 (three hundred and forty-
 letters and 115 (one hundred and fifteen) contains 20 letters. The use of "and" when writing out
 numbers is in compliance with British usage.
 """
+
 import pytest
 
 BASE_COUNTS = {
